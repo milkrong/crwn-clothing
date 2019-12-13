@@ -1,4 +1,6 @@
 import React from 'react';
+import CartIcon from '../cart-icon/cart-icaon.component';
+import CartDropdown from '../cart/cart-drop-down/cart-drop-down';
 import { Link } from 'react-router-dom';
 import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
@@ -24,7 +26,9 @@ const Header = ({currentUser}) => (
                 ) :
                 <Link className="option" to="/signIn">SIGN IN</Link>
             }
+            <CartIcon />
         </div>
+        <CartDropdown />
     </div>
 )
 
